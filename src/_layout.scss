@@ -1,0 +1,296 @@
+/*layout*/
+
+/*布局*/
+.group {
+  @include clearfix;
+  margin-bottom: 10px;
+}
+.row {
+  @extend .group;
+  margin-left: -20px;
+}
+
+@for $i from 1 through 12 {
+  .span#{$i} {
+    float: left;
+    width: #{60 * $i + 20 * ($i - 1)}px;
+    margin-left: 20px;
+
+    //fix double-margin bug
+    _display: inline;
+  }
+}
+
+@for $i from 1 through 12 {
+  .offset#{$i} {
+    margin-left: #{60 * $i + 20 * ($i + 1)}px;
+  }
+}
+
+/*basic*/
+.mod {
+  @extend .relative;
+  overflow: hidden;
+}
+.hd {
+  @extend .mod;
+  @extend .unselectable;
+  @extend .oneline;
+}
+.bd {
+  @extend .mod;
+}
+
+/*panel*/
+.panel-mod {
+  @extend .mod;
+  margin-bottom: 10px;
+}
+.panel-hd {
+  @extend .hd;
+
+  padding: 3px 5px 4px;
+  border: 1px solid #99bce8;
+  @include side-radius(top, 4px);
+  @include gradient(#cbddf3, top, #dae7f6, #cddef3 45%, #abc7ec 46%, #abc7ec 50%, #b8cfee 51%, #cbddf3);
+  box-shadow: #f4f8fd 0 1px 0 0 inset;
+
+  span {
+    font-weight: bold;
+    color: #04408c;
+  }
+}
+.panel-bd {
+  @extend .bd;
+
+  border: 1px solid #99bce8;
+  border-top-width: 0;
+  background: #dfe9f6;
+}
+
+/*accordion*/
+.accordion-hd {
+  @extend .hd;
+
+  padding: 3px 5px 4px;
+  border-top: 1px solid #99bce8;
+  border-bottom-width: 0;
+  background: #d9e7f8;
+
+  &:first-child {
+    border-top-width: 0;
+  }
+}
+.accordion-hd-is-active {
+  border-bottom: 1px solid #99bce8;
+}
+.accordion-bd {
+  @extend .bd;
+  background: white;
+  display: none;
+}
+
+/*tool*/
+@mixin icon-tool($top) {
+  @include icon(url('../images/tool-sprites.gif'), 15px, 15px);
+  background-position: 0 $top;
+
+  float: right;
+  cursor: pointer;
+
+  &:hover {
+    background-position: -15px $top;
+  }
+}
+
+.icon-tool-close {
+  @include icon-tool(0);
+}
+.icon-tool-minimize {
+  @include icon-tool(-15px);
+}
+.icon-tool-maximize {
+  @include icon-tool(-30px);
+}
+.icon-tool-restore {
+  @include icon-tool(-45px);
+}
+.icon-tool-toggle-up {
+  @include icon-tool(-60px);
+}
+.icon-tool-toggle-down {
+  @include icon-tool(-75px);
+}
+.icon-tool-gear {
+  @include icon-tool(-90px);
+}
+.icon-tool-prev {
+  @include icon-tool(-105px);
+}
+.icon-tool-next {
+  @include icon-tool(-120px);
+}
+.icon-tool-pin {
+  @include icon-tool(-135px);
+}
+.icon-tool-unpin {
+  @include icon-tool(-150px);
+}
+.icon-tool-right {
+  @include icon-tool(-165px);
+}
+.icon-tool-left {
+  @include icon-tool(-180px);
+}
+.icon-tool-down {
+  @include icon-tool(-195px);
+}
+.icon-tool-up {
+  @include icon-tool(-210px);
+}
+.icon-tool-refresh {
+  @include icon-tool(-225px);
+}
+.icon-tool-plus {
+  @include icon-tool(-240px);
+}
+.icon-tool-minus {
+  @include icon-tool(-255px);
+}
+.icon-tool-search {
+  @include icon-tool(-270px);
+}
+.icon-tool-save {
+  @include icon-tool(-285px);
+}
+.icon-tool-help {
+  @include icon-tool(-300px);
+}
+.icon-tool-print {
+  @include icon-tool(-315px);
+}
+.icon-tool-expand {
+  @include icon-tool(-330px);
+}
+.icon-tool-collapse {
+  @include icon-tool(-345px);
+}
+
+/*tab*/
+.tab-hd {
+  @extend .hd;
+  @include inline-block;
+
+  _margin-left:3px;
+  margin-bottom:-1px;
+  padding: 0 9px;
+
+  border: 1px solid #8db3e3;
+  border-bottom-color: #99bce8;
+  font-weight: bold;
+  color: #416da3;
+  cursor: pointer;
+
+  @include side-radius(top, 4px);
+  @include gradient(#deecfd, top, #ccdef6, #d6e6fa 25%, #deecfd 45%);
+  box-shadow: #fff 0 1px 0 0 inset, #fff -1px 0 0 0 inset, #fff 1px 0 0 0 inset;
+
+  &:first-child {
+    margin-left: 3px;
+  }
+}
+.tab-hd-is-active {
+  border-bottom-color: #deecfd;
+  color: #15498b;
+  @include gradient(#99bce8, top, #fff, #f5f9fe 25%, #deecfd 45%);
+}
+
+.tab-strip {
+  height: 3px;
+  /*解决IE6中最小高度为字体高度的问题*/
+  _font-size:0;
+  border: 1px solid #99bce8;
+  background-color: #deecfd;
+}
+.tab-bd {
+  @extend .panel-bd;
+  display: none;
+}
+
+/*dialog*/
+.dialog {
+  @extend .mod;
+  position: absolute;
+  padding: 4px;
+  z-index: 3;
+
+  @include radius(5px);
+  border: 1px solid #a2b1c5;
+  background-color: #ced9e7;
+  box-shadow: #ecf2fb 0 1px 0 0 inset, #ecf2fb 0 -1px 0 0 inset, #ecf2fb -1px 0 0 0 inset, #ecf2fb 1px 0 0 0 inset;
+
+  &:focus {
+    //取消chrome默认样式
+    outline: none;
+  }
+}
+
+/*layer*/
+.layer {
+  @extend .mod;
+  border: 1px solid #98c0f4;
+  background: white;
+  box-shadow: 1px 1px 4px #888888;
+}
+
+ul.list {
+  overflow: auto;
+
+  li {
+    padding: 2px;
+    border: 1px dotted white;
+    background: white;
+    cursor: pointer;
+
+    &:hover {
+      border-color: #a3bae9;
+      background: #dfe8f6;
+    }
+
+    &.list-item-is-selected {
+      border-color: #8eabe4;
+      background: #cbdaf0;
+    }
+  }
+}
+
+/*menu*/
+ul.menu {
+  overflow: auto;
+  padding: 2px;
+  background: #f0f0f0;
+
+  li {
+    height: 24px;
+    padding: 5px 6px 0 6px;
+    border: 1px solid transparent;
+    _border: 1px solid #f0f0f0;
+    cursor: pointer;
+
+    &:hover, &.menu-item-is-selected {
+      border-color: #a9cbf5;
+      @include radius(3px);
+      @include gradient(#c7ddf9, top, #e7f0fc, #c7ddf9);
+    }
+  }
+}
+
+.menu-with-pic li {
+  .menu-item-pic {
+    position: absolute;
+  }
+
+  span {
+    margin-left: 20px;
+  }
+}

@@ -1,0 +1,145 @@
+%fix-table {
+  table {
+    table-layout: fixed;
+    width: 100%;
+  }
+  th {
+    padding: 0;
+  }
+}
+.grid-hd {
+  @extend .hd;
+
+  _width: 100%;
+  @include gradient(#e3e4e6, top, #f9f9f9, #e3e4e6);
+  @extend %fix-table;
+
+  .grid-cell {
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+  }
+}
+.grid-bd {
+  @extend .bd;
+  background: white;
+}
+.grid-view {
+  overflow: auto;
+  _width: 100%;
+  height: 100%;
+  @extend %fix-table;
+}
+
+.grid-row:hover {
+  background-color: #efefef;
+}
+.grid-row-alt {
+  background-color: #fafafa;
+}
+.grid-row-is-selected,
+.grid-row-is-selected:hover {
+  background-color: #dfe8f6;
+}
+
+.grid-cell {
+  @extend .oneline;
+
+  padding: 0 4px;
+  border-width: 0 1px 1px 0;
+  border-style: dotted;
+  border-color: #c5c5c5;
+}
+.grid-mark-cell {
+  background-color: #e3e4e6;
+  text-align: center;
+  border-bottom-style: solid;
+}
+.grid-detail-cell {
+  border-right-width: 0;
+}
+
+.grid-is-desc span {
+  padding-right: 16px;
+  background: url('../images/sort_desc.gif') no-repeat right 6px;
+}
+.grid-is-asc span {
+  padding-right: 16px;
+  background: url('../images/sort_asc.gif') no-repeat right 6px;
+}
+.grid-is-sortable, .grid-is-desc, .grid-is-asc {
+  cursor: pointer;
+}
+
+.grid-cell-is-collapse {
+  background: url('../images/group-collapse.gif') no-repeat 9px 2px;
+}
+.grid-cell-is-expand {
+  background: url('../images/group-expand.gif') no-repeat 9px 2px;
+}
+
+/*tree*/
+.grid-with-no-border .grid-cell {
+  border-width: 0;
+}
+
+.tree-item {
+  @extend .unselectable;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.icon-tree-elbow-empty{
+  @include icon($width:16px, $height:20px);
+}
+
+@mixin icon-tree($left, $top) {
+  @include icon(url('../images/tree.gif'), 16px, 20px);
+  background-position: $left $top;
+}
+
+.icon-tree-elbow-end {
+  @include icon-tree(0, 0);
+}
+.icon-tree-elbow-end-minus {
+  @include icon-tree(-16px, 0);
+}
+.icon-tree-elbow-end-minus-nl {
+  @include icon-tree(-32px, 0);
+}
+.icon-tree-elbow-end-plus {
+  @include icon-tree(-48px, 0);
+}
+.icon-tree-elbow-end-plus-nl {
+  @include icon-tree(0, -20px);
+}
+
+.icon-tree-elbow {
+  @include icon-tree(-16px, -20px);
+}
+.icon-tree-elbow-line {
+  @include icon-tree(-32px, -20px);
+}
+.icon-tree-elbow-minus {
+  @include icon-tree(-48px, -20px);
+}
+.icon-tree-elbow-minus-nl {
+  @include icon-tree(0, -40px);
+}
+.icon-tree-elbow-plus {
+  @include icon-tree(-16px, -40px);
+}
+
+.icon-tree-elbow-plus-nl {
+  @include icon-tree(-32px, -40px);
+}
+
+.icon-tree-folder {
+  @include icon(url('../images/folder.gif'));
+}
+.icon-tree-folder-open {
+  @include icon(url('../images/folder-open.gif'));
+}
+.icon-tree-leaf {
+  @include icon(url('../images/leaf.gif'));
+}

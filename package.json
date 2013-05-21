@@ -1,0 +1,15 @@
+{
+  "name": "extui",
+  "family": "kjui",
+  "version": "1.0.0",
+  "description": "ExtJS风格的UI界面，测试环境Chrome，IE6，IE8",
+  "author": "Stone Lee <istonelee@gmail.com> (http://stonelee.info)",
+  "homepage": "http://stonelee.info/kjui-extui",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stonelee/kjui-extui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stonelee/kjui-extui/issues"
+  }
+}

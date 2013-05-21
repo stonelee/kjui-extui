@@ -1,0 +1,141 @@
+.toolbar {
+  padding: 2px 0 2px 2px;
+  border: 1px solid #99bce8;
+  @include gradient(#d3e1f1, top, #dfe9f5, #d3e1f1);
+}
+.toolbar-hd {
+  @extend .toolbar;
+  border-width: 0 0 1px 0;
+}
+.toolbar-ft {
+  @extend .toolbar;
+  padding: 4px 0 5px 5px;
+  border-width: 1px 0 0 0;
+}
+
+.toolbar-btn {
+  @include inline-block;
+  padding: 2px;
+  border: 1px solid;
+  border-color: transparent;
+  _border-color: #d3e1f1;
+  @include radius(3px);
+  cursor: pointer;
+  vertical-align: middle;
+
+  &:hover {
+    border-color: #81a4d0;
+    @include gradient(#bed6f5, top, #dbeeff, #d0e7ff 48%, #bbd2f0 52%, #bed6f5);
+  }
+  &:active {
+    @extend .toolbar-btn-is-pressed;
+  }
+  span {
+    vertical-align: middle;
+  }
+
+  &.disabled{
+    &:hover, &:active {
+      border-color: transparent;
+      background: transparent;
+    }
+  }
+}
+.toolbar-btn-is-pressed {
+  border-color: #7a9ac4;
+  @include gradient(#9fc9f5, top, #bccfe5, #c5d6e7 48%, #95c4f4 52%, #9fc9f5);
+
+  &:hover {
+    @extend .toolbar-btn-is-pressed;
+  }
+}
+
+.toolbar-text {
+  color: #4c4c4c;
+}
+.toolbar-text-right {
+  @extend .toolbar-text;
+  float: right;
+  margin-right: 20px;
+}
+.toolbar-separator {
+  vertical-align: middle;
+  border-right: 1px solid white;
+  border-left: 1px solid #98c8ff;
+}
+
+/*toolbar icon*/
+@mixin toolbar-icon($background) {
+  @include icon($background);
+
+  border: 1px solid;
+  border-color: transparent;
+  //IE6中border不能为transparent
+  _border-color: #d3e1f1;
+
+  @include radius(3px);
+  cursor: pointer;
+
+  &:hover {
+    border-color: #81a4d0;
+    background-color: #dbeeff;
+  }
+  &:active {
+    border-color: #7a9ac4;
+    background-color: #bccfe5;
+  }
+}
+
+@mixin icon-grid($left, $top) {
+  @include toolbar-icon(url('../images/grid.gif'));
+  background-position: $left $top;
+}
+@mixin icon-grid-disabled($left, $top) {
+  @include icon-grid($left, $top);
+  cursor: default;
+
+  &:hover, &:active {
+    border-color: transparent;
+    background-color: transparent;
+  }
+}
+.icon-grid-page-first-disabled {
+  @include icon-grid-disabled(0, 0);
+}
+.icon-grid-page-first {
+  @include icon-grid(-16px, 0);
+}
+.icon-grid-page-last-disabled {
+  @include icon-grid-disabled(-32px, 0);
+}
+.icon-grid-page-last {
+  @include icon-grid(-48px, 0);
+}
+.icon-grid-page-next-disabled {
+  @include icon-grid-disabled(0, -16px);
+}
+.icon-grid-page-next {
+  @include icon-grid(-16px, -16px);
+}
+.icon-grid-page-prev-disabled {
+  @include icon-grid-disabled(-32px, -16px);
+}
+.icon-grid-page-prev {
+  @include icon-grid(-48px, -16px);
+}
+.icon-grid-refresh-disabled {
+  @include icon-grid-disabled(0, -32px);
+}
+.icon-grid-refresh {
+  @include icon-grid(-16px, -32px);
+}
+
+.toolbar-icon-is-pressed {
+  border-color: #7a9ac4;
+  background-color: #bccfe5;
+
+  &:hover {
+    @extend .toolbar-icon-is-pressed;
+  }
+}
+

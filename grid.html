@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>grid demo</title>
+    <link rel="stylesheet" href="dist/extui.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script>
+      $(function() {
+        $('#scroll .grid-view').scroll(function() {
+          $('#scroll .grid-hd').scrollLeft($(this).scrollLeft());
+        });
+      })
+    </script>
+  </head>
+  <body style="padding:20px;">
+
+    <div class="panel-mod" style="width:455px;">
+      <div class="panel-hd">
+        <span>tree</span>
+      </div>
+      <div class="panel-bd">
+
+        <div class="grid-bd">
+          <div class="mask">
+            <div class="mask-bg"></div>
+            <div class="mask-msg" style="left:180px;top:60px;">
+              <div class="loading">加载中...</div>
+            </div>
+          </div>
+
+          <div class="grid-view grid-with-no-border" style="_overflow-x:hidden;">
+            <table>
+
+              <tbody>
+                <tr class="grid-row">
+                  <td class="grid-cell">
+                    <i class="icon-tree-elbow-end-minus" data-type="toggle"></i><i class="icon-tree-folder-open"></i><span class="tree-item">攸县</span>
+                  </td>
+                </tr>
+                <tr class="grid-row grid-row-is-selected">
+                  <td class="grid-cell">
+                    <i class="icon-tree-elbow-empty"></i><i class="icon-tree-elbow"></i><i class="icon-tree-leaf"></i><span class="tree-item">4验票站</span>
+                  </td>
+                </tr>
+                <tr class="grid-row">
+                  <td class="grid-cell">
+                    <i class="icon-tree-elbow-empty"></i><i class="icon-tree-elbow-minus"></i><i class="icon-tree-folder-open"></i><span class="tree-item">验票站</span>
+                  </td>
+                </tr>
+                <tr class="grid-row">
+                  <td class="grid-cell">
+                    <i class="icon-tree-elbow-empty"></i><i class="icon-tree-elbow-line"></i><i class="icon-tree-elbow-end"></i><i class="icon-tree-leaf"></i><span class="tree-item">2验票站</span>
+                  </td>
+                </tr>
+                <tr class="grid-row">
+                  <td class="grid-cell">
+                    <i class="icon-tree-elbow-empty"></i><i class="icon-tree-elbow-minus"></i><i class="icon-tree-folder-open"></i><span class="tree-item">3验票站</span>
+                  </td>
+                </tr>
+                <tr class="grid-row">
+                  <td class="grid-cell">
+                    <i class="icon-tree-elbow-empty"></i><i class="icon-tree-elbow-line"></i><i class="icon-tree-elbow"></i><i class="icon-tree-leaf"></i><span class="tree-item">2验票站</span>
+                  </td>
+                </tr>
+                <tr class="grid-row">
+                  <td class="grid-cell">
+                    <i class="icon-tree-elbow-empty"></i><i class="icon-tree-elbow-line"></i><i class="icon-tree-elbow-end"></i><i class="icon-tree-leaf"></i><span class="tree-item">2验票站</span>
+                  </td>
+                </tr>
+                <tr class="grid-row">
+                  <td class="grid-cell">
+                    <i class="icon-tree-elbow-empty"></i><i class="icon-tree-elbow-end"></i><i class="icon-tree-leaf"></i><span class="tree-item">2验票站</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-mod" style="width:455px;">
+      <div class="panel-hd">
+        <span>check tree</span>
+      </div>
+      <div class="panel-bd">
+        <div class="grid-bd">
+
+          <div class="grid-view grid-with-no-border" style="_overflow-x:hidden;">
+            <table>
+
+              <tbody>
+                <tr class="grid-row">
+                  <td class="grid-cell">
+                    <i class="icon-tree-elbow-end-minus" data-type="toggle"></i><i class="icon-tree-folder-open"></i><span class="tree-item">攸县</span>
+                  </td>
+                </tr>
+                <tr class="grid-row">
+                  <td class="grid-cell">
+                    <i class="icon-tree-elbow-empty"></i><i class="icon-tree-elbow"></i><input type="checkbox"><i class="icon-tree-leaf"></i><span class="tree-item">4验票站</span>
+                  </td>
+                </tr>
+                <tr class="grid-row">
+                  <td class="grid-cell">
+                    <i class="icon-tree-elbow-empty"></i><i class="icon-tree-elbow-minus"></i><input type="checkbox"><i class="icon-tree-folder-open"></i><span class="tree-item">验票站</span>
+                  </td>
+                </tr>
+                <tr class="grid-row">
+                  <td class="grid-cell">
+                    <i class="icon-tree-elbow-empty"></i><i class="icon-tree-elbow-line"></i><i class="icon-tree-elbow-end"></i><input type="checkbox"><i class="icon-tree-leaf"></i><span class="tree-item">2验票站</span>
+                  </td>
+                </tr>
+                <tr class="grid-row">
+                  <td class="grid-cell">
+                    <i class="icon-tree-elbow-empty"></i><i class="icon-tree-elbow-end"></i><input type="checkbox"><i class="icon-tree-leaf"></i><span class="tree-item">2验票站</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-mod" style="width:378px;">
+      <div class="panel-hd">
+        <span>tree grid</span>
+      </div>
+      <div class="panel-bd">
+
+        <div class="grid-hd">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:200px;"></th>
+                <th style="width:60px;"></th>
+                <th style="width:100px;"></th>
+                <th style="width:18px;"></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="grid-cell"><span>title</span></td>
+                <td class="grid-cell grid-is-desc"><span>title</span></td>
+                <td class="grid-cell grid-is-asc"><span>title</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid-bd" style="height:60px;">
+          <div class="grid-view grid-with-no-border" style="_overflow-x:hidden;">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width:200px;"></th>
+                  <th style="width:60px;"></th>
+                  <th style="width:100px;"></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="grid-row">
+                  <td class="grid-cell">
+                    <i class="icon-tree-elbow-plus"></i><i class="icon-tree-folder"></i><span class="tree-item">First</span>
+                  </td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+                <tr class="grid-row">
+                  <td class="grid-cell">
+                    <i class="icon-tree-elbow-minus"></i><i class="icon-tree-folder-open"></i><span class="tree-item">Second</span>
+                  </td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+                <tr class="grid-row grid-row-is-selected">
+                  <td class="grid-cell">
+                    <i class="icon-tree-elbow-line"></i><i class="icon-tree-elbow-end"></i><i class="icon-tree-leaf"></i><span class="tree-item">Second-first</span>
+                  </td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+                <tr class="grid-row">
+                  <td class="grid-cell">
+                    <i class="icon-tree-elbow-end-plus"></i><i class="icon-tree-folder"></i><span class="tree-item">Third</span>
+                  </td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--width=50+150+260+18=478px-->
+    <!--header加18px的滚动条占位-->
+    <!--自由th，td用于table宽度过大时各单元格依然宽度固定-->
+    <div class="panel-mod" style="width:478px;">
+      <div class="panel-hd">
+        <span>simple grid</span>
+      </div>
+      <div class="panel-bd">
+
+        <div class="toolbar-hd">
+          <div class="toolbar-btn">
+            <i class="icon icon-book"></i>
+            <span>新建</span>
+          </div>
+          <div class="toolbar-btn">
+            <i class="icon icon-book"></i>
+            <span>编辑</span>
+          </div>
+          <div class="toolbar-btn">
+            <i class="icon icon-book"></i>
+            <span>删除</span>
+          </div>
+        </div>
+
+        <div class="grid-hd">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:50px;"></th>
+                <th style="width:150px;"></th>
+                <th style="width:260px;"></th>
+                <th style="width:18px;"></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="grid-cell"><span>title</span></td>
+                <td class="grid-cell grid-is-desc"><span>title</span></td>
+                <td class="grid-cell grid-is-asc"><span>title</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid-bd">
+          <div class="mask">
+            <div class="mask-bg"></div>
+            <div class="mask-msg" style="left:180px;top:20px;">
+              <div class="loading">加载中...</div>
+            </div>
+          </div>
+
+          <div class="grid-view" style="_overflow-x:hidden;">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width:50px;"></th>
+                  <th style="width:150px;"></th>
+                  <th style="width:260px;"></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="grid-row">
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+                <tr class="grid-row grid-row-alt">
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+                <tr class="grid-row grid-row-is-selected">
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+                <tr class="grid-row grid-row-alt">
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="toolbar-ft">
+          <span class="toolbar-text-right">共100条记录，每页10条</span>
+          <i class="icon-grid-page-first-disabled"></i>
+          <i class="icon-grid-page-prev-disabled"></i>
+          <i class="toolbar-separator"></i>
+          <span class="toolbar-text">当前第</span>
+          <input style="width:40px;" type="text" value="1">
+          <span class="toolbar-text">/10页</span>
+          <i class="toolbar-separator"></i>
+          <i class="icon-grid-page-next"></i>
+          <i class="icon-grid-page-last"></i>
+          <i class="toolbar-separator"></i>
+          <i class="icon-grid-refresh toolbar-icon-is-pressed"></i>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel-mod" style="width:455px;">
+      <div class="panel-hd">
+        <span>complex header</span>
+      </div>
+      <div class="panel-bd">
+
+        <div class="grid-hd">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:70px;"></th>
+                <th style="width:60px;"></th>
+                <th style="width:80px;"></th>
+                <th style="width:90px;"></th>
+                <th style="width:57px;"></th>
+                <th style="width:80px;"></th>
+                <th style="width:18px;"></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="grid-cell" rowspan="3"><span>one</span></td>
+                <td class="grid-cell" colspan="2"><span>two</span></td>
+                <td class="grid-cell" colspan="3"><span>three</span></td>
+              </tr>
+              <tr>
+                <td class="grid-cell grid-is-desc" rowspan="2"><span>title1</span></td>
+                <td class="grid-cell grid-is-asc" rowspan="2"><span>title2</span></td>
+                <td class="grid-cell grid-is-asc" rowspan="2"><span>title3</span></td>
+                <td class="grid-cell" colspan="2"><span>title4</span></td>
+              </tr>
+              <tr>
+                <td class="grid-cell"><span>title5</span></td>
+                <td class="grid-cell"><span>title6</span></td>
+              </tr>
+            </thead>
+          </table>
+        </div>
+
+        <div class="grid-bd">
+          <div class="grid-view" style="_overflow-x:hidden;">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width:70px;"></th>
+                  <th style="width:60px;"></th>
+                  <th style="width:80px;"></th>
+                  <th style="width:90px;"></th>
+                  <th style="width:57px;"></th>
+                  <th style="width:80px;"></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="grid-row">
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+                <tr class="grid-row grid-row-alt">
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+                <tr class="grid-row grid-row-is-selected">
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+                <tr class="grid-row grid-row-alt">
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!--宽度定死即可-->
+    <div id="scroll" class="panel-mod" style="width:455px;">
+      <div class="panel-hd">
+        <span>too long grid</span>
+      </div>
+      <div class="panel-bd">
+
+        <div class="grid-hd">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:50px;"></th>
+                <th style="width:100px;"></th>
+                <th style="width:110px;"></th>
+                <th style="width:120px;"></th>
+                <th style="width:130px;"></th>
+                <th style="width:140px;"></th>
+                <th style="width:18px;"></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="grid-cell"><span>title</span></td>
+                <td class="grid-cell grid-is-desc"><span>title</span></td>
+                <td class="grid-cell grid-is-asc"><span>title</span></td>
+                <td class="grid-cell grid-is-desc"><span>title</span></td>
+                <td class="grid-cell grid-is-desc"><span>title</span></td>
+                <td class="grid-cell grid-is-desc"><span>title</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!--定高-->
+        <div class="grid-bd" style="height:100px;">
+          <div class="mask">
+            <div class="mask-bg"></div>
+            <div class="mask-msg" style="left:180px;top:20px;">
+              <div class="loading">加载中...</div>
+            </div>
+          </div>
+
+          <div class="grid-view">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width:50px;"></th>
+                  <th style="width:100px;"></th>
+                  <th style="width:110px;"></th>
+                  <th style="width:120px;"></th>
+                  <th style="width:130px;"></th>
+                  <th style="width:140px;"></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="grid-row">
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+                <tr class="grid-row grid-row-alt">
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+                <tr class="grid-row grid-row-is-selected">
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+                <tr class="grid-row grid-row-alt">
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+                <tr class="grid-row">
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+                <tr class="grid-row grid-row-alt">
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel-mod" style="width:508px;">
+      <div class="panel-hd">
+        <span>number grid</span>
+      </div>
+      <div class="panel-bd">
+
+        <div class="grid-hd">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:30px;"></th>
+                <th style="width:50px;"></th>
+                <th style="width:150px;"></th>
+                <th style="width:260px;"></th>
+                <th style="width:18px;"></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="grid-cell"><span></span></td>
+                <td class="grid-cell"><span>title</span></td>
+                <td class="grid-cell grid-is-desc"><span>title</span></td>
+                <td class="grid-cell grid-is-asc"><span>title</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid-bd">
+          <div class="grid-view" style="_overflow-x:hidden;">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width:30px;"></th>
+                  <th style="width:50px;"></th>
+                  <th style="width:150px;"></th>
+                  <th style="width:260px;"></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="grid-row">
+                  <td class="grid-cell grid-mark-cell">1</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+                <tr class="grid-row grid-row-alt">
+                  <td class="grid-cell grid-mark-cell">2</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+                <tr class="grid-row grid-row-is-selected">
+                  <td class="grid-cell grid-mark-cell">3</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+                <tr class="grid-row grid-row-alt">
+                  <td class="grid-cell grid-mark-cell">4</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel-mod" style="width:508px;">
+      <div class="panel-hd">
+        <span>check grid</span>
+      </div>
+      <div class="panel-bd">
+
+        <div class="grid-hd">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:30px;"></th>
+                <th style="width:50px;"></th>
+                <th style="width:150px;"></th>
+                <th style="width:260px;"></th>
+                <th style="width:18px;"></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="grid-cell"><input type="checkbox" /></td>
+                <td class="grid-cell"><span>title</span></td>
+                <td class="grid-cell grid-is-desc"><span>title</span></td>
+                <td class="grid-cell grid-is-asc"><span>title</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid-bd">
+          <div class="grid-view" style="_overflow-x:hidden;">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width:30px;"></th>
+                  <th style="width:50px;"></th>
+                  <th style="width:150px;"></th>
+                  <th style="width:260px;"></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="grid-row">
+                  <td class="grid-cell grid-mark-cell"><input type="checkbox" /></td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+                <tr class="grid-row grid-row-alt">
+                  <td class="grid-cell grid-mark-cell"><input type="checkbox" /></td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+                <tr class="grid-row grid-row-is-selected">
+                  <td class="grid-cell grid-mark-cell"><input type="checkbox" /></td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+                <tr class="grid-row grid-row-alt">
+                  <td class="grid-cell grid-mark-cell"><input type="checkbox" /></td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel-mod" style="width:508px;">
+      <div class="panel-hd">
+        <span>expand grid</span>
+      </div>
+      <div class="panel-bd">
+
+        <div class="grid-hd">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:30px;"></th>
+                <th style="width:50px;"></th>
+                <th style="width:150px;"></th>
+                <th style="width:260px;"></th>
+                <th style="width:18px;"></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="grid-cell"><span></span></td>
+                <td class="grid-cell"><span>title</span></td>
+                <td class="grid-cell grid-is-desc"><span>title</span></td>
+                <td class="grid-cell grid-is-asc"><span>title</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid-bd">
+          <div class="grid-view" style="_overflow-x:hidden;">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width:30px;"></th>
+                  <th style="width:50px;"></th>
+                  <th style="width:150px;"></th>
+                  <th style="width:260px;"></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="grid-row">
+                  <td class="grid-cell grid-cell-is-expand"></td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+                <tr class="grid-row-detail" style="display:none;">
+                  <td colspan="4" class="grid-cell"></td>
+                </tr>
+                <tr class="grid-row grid-row-alt">
+                  <td class="grid-cell grid-cell-is-collapse"></td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+                <tr class="grid-row-detail">
+                  <td class="grid-cell grid-detail-cell"></td>
+                  <td colspan="3" class="grid-cell">
+                    <p>detail</p>
+                  </td>
+                </tr>
+                <tr class="grid-row grid-row-is-selected">
+                  <td class="grid-cell grid-cell-is-expand"></td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+                <tr class="grid-row-detail" style="display:none;">
+                  <td colspan="4" class="grid-cell"></td>
+                </tr>
+                <tr class="grid-row grid-row-alt">
+                  <td class="grid-cell grid-cell-is-expand"></td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                  <td class="grid-cell">a</td>
+                </tr>
+                <tr class="grid-row-detail" style="display:none;">
+                  <td colspan="4" class="grid-cell"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>

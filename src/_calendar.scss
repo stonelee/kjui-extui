@@ -1,0 +1,138 @@
+.calendar {
+  border: 1px solid #1b376c;
+  background-color: white;
+  width: 171px;
+
+  ul {
+    @include clearfix;
+  }
+
+  li {
+    float: left;
+    width: 24px;
+    padding: 2px 0;
+
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+.calendar-navigation {
+  color: white;
+  background-color: #23427c;
+
+  .calendar-month-year {
+    width: 75px;
+  }
+
+  li {
+    font-weight: normal;
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}
+
+.calendar-control {
+  border-bottom: 1px solid #b2d1f5;
+  color: #233d6d;
+  @include gradient(#cde1f9, top, #edf4fd, #cde1f9);
+}
+
+.calendar-data-container {
+  li {
+    color: black;
+    width: 22px;
+
+    border: 1px solid;
+    border-color: transparent;
+    _border-color: white;
+
+    &:hover {
+      color: black;
+      background-color: #ddecfe;
+    }
+
+    &.previous-month, &.next-month {
+      color: #aaa;
+    }
+
+    &.disabled-date {
+      color: #bbb;
+      background-color: #eee;
+      cursor: default;
+    }
+
+    &.focused-element {
+      border-color: darkRed;
+      background-color: #ddecfe;
+    }
+  }
+
+  .calendar-year-column li, .calendar-month-column li {
+    width: 55px;
+  }
+
+}
+
+.calendar-time {
+  padding: 5px 0;
+  border-top: 1px solid #b2d1f5;
+
+  input {
+    width: 15px;
+    margin: 0 2px;
+  }
+
+  //TODO: 按钮统一由button换为a?
+  a {
+    padding: 3px 6px;
+  }
+}
+
+.calendar-footer {
+  border-top: 1px solid #b2d1f5;
+  text-align: center;
+  @include gradient(#cbdaee, top, #dee8f5, #d1dff0 49%, #c7d8ed 51%, #cbdaee);
+}
+
+.calendar-overlay {
+  display: none;
+  padding: 0 5px;
+
+  ul {
+    border: 1px solid #8eaace;
+    @include radius(3px);
+    background-color: #e9f2ff;
+    box-shadow: rgb(136, 136, 136) 0px 0px 4px 0px;
+  }
+  li:hover {
+    background: #cbdaf0;
+  }
+  li:active {
+    @extend .calendar-overlay-is-active;
+  }
+
+  //TODO: refactor
+  .calendar-overlay-triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    font-size: 0;
+
+    border-width: 6px;
+    border-color: #e9f2ff transparent transparent transparent;
+    border-style: solid dashed dashed dashed;
+
+    bottom: -11px;
+  }
+  .calendar-overlay-triangle-shadow {
+    @extend .calendar-overlay-triangle;
+    border-top-color: #8eaace;
+
+    bottom: -12px;
+  }
+}
+.calendar-overlay-is-active {
+  background: #99bce8;
+}

@@ -1,0 +1,139 @@
+/*form*/
+.form-hd {
+  @extend .hd;
+
+  span {
+    font-weight: bold;
+    color: #04468c;
+  }
+}
+.form-bd {
+  @extend .bd;
+  padding: 10px;
+}
+.form-label {
+  display: inline-block;
+  width: 70px;
+  text-align: right;
+}
+.form-star {
+  font-weight: bold;
+  color: red;
+}
+
+.form-ft {
+  padding: 3px 0 4px;
+  border-top: 1px solid #b5b8c8;
+  text-align: center;
+}
+
+input {
+  vertical-align:middle;
+  //IE6下高度有点大
+  _height:13px;
+}
+textarea,
+input[type="text"],
+input[type="password"] {
+  padding: 1px 3px;
+  border: 1px solid #b5b8c8;
+  background: #fff url('../images/text-bg.gif') repeat-x 0 0;
+}
+input.form-invalid {
+  border:1px solid #cc3300;
+  background: #fff url('../images/invalid_line.gif') repeat-x bottom;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #7eadd9;
+  outline: none;
+}
+input[type="text"],
+input[type="password"] {
+  //firefox默认高度过大
+  height: 15px;
+}
+
+@for $i from 2 through 12 {
+  .form-bd .span#{$i} input {
+    width: #{40 + 80 * ($i - 2)}px;
+  }
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+fieldset {
+  padding: 10px;
+  border: 1px solid #b5b8c8;
+}
+fieldset legend {
+  padding: 0 3px 1px;
+  color: #15428b;
+}
+
+/*form trigger*/
+@mixin icon-form-trigger($background){
+  @include icon($background, 17px, 18px);
+  border-bottom: 1px solid #b5b8c8;
+  cursor: pointer;
+
+  &:hover {
+    border-bottom-color: #7eadd9;
+    background-position: -17px 0;
+  }
+}
+.icon-form-trigger {
+  @include icon-form-trigger(url('../images/trigger.gif'));
+}
+.icon-form-date-trigger {
+  @include icon-form-trigger(url('../images/date-trigger.gif'));
+}
+.icon-form-clear-trigger {
+  @include icon-form-trigger(url('../images/clear-trigger.gif'));
+}
+.icon-form-search-trigger {
+  @include icon-form-trigger(url('../images/search-trigger.gif'));
+}
+.icon-form-spinner-trigger {
+  @include icon-form-trigger(url('../images/spinner-small.gif'));
+}
+
+/*btn*/
+.btn {
+  width: 60px;
+  height: 22px;
+  margin: 2px;
+
+  @include radius(3px);
+  @include gradient(#f5f5f5, top, #fff, #f9f9f9 48%, #e2e2e2 52%, #e7e7e7);
+  border: 1px solid #d1d1d1;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #b0ccf2;
+    @include gradient(#c6dcf6, top, #e4f3ff, #d9edff 48%, #c2d8f2 52%, #c6dcf6);
+  }
+  &:active {
+    @extend .btn-is-pressed;
+  }
+
+  &.disabled{
+    &:hover, &:active {
+      @include gradient(#99bce8, top, #fff, #f9f9f9 48%, #e2e2e2 52%, #e7e7e7);
+      border: 1px solid #d1d1d1;
+    }
+  }
+}
+.btn-is-pressed {
+  border-color: #9ebae1;
+  @include gradient(#49afcd, top, #b6cbe4, #bfd2e6 48%, #8dc0f5 52%, #98c5f5);
+
+  &:hover {
+    @extend .btn-is-pressed;
+  }
+}

@@ -1,0 +1,41 @@
+@mixin icon($background:'', $width:16px, $height:16px) {
+  display: inline-block;
+  width: $width;
+  height: $height;
+  vertical-align: middle;
+
+  @if ($background != '') {
+    background-image: $background;
+  }
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.icon {
+  @include icon;
+}
+
+.icon-arrow {
+  @include icon(url('../images/arrow.gif'), 14px, 14px);
+}
+.icon-menu-parent {
+  @include icon(url('../images/menu-parent.gif'), 12px, 9px);
+}
+.icon-question {
+  @include icon(url('../images/icon-question.gif'), 50px, 35px);
+}
+.icon-info {
+  @include icon(url('../images/icon-info.gif'), 50px, 35px);
+}
+
+/*自定义图标*/
+.icon-exclamation {
+  @include icon(url('../images/exclamation.gif'));
+}
+
+.icon-book-addresses {
+  @include icon(url('../images/icons/book_addresses.png'));
+}
+.icon-book {
+  @include icon(url('../images/icons/book.png'));
+}
+

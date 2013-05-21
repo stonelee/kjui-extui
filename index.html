@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>static demo</title>
+    <link rel="stylesheet" href="dist/extui.css">
+    <style type="text/css">
+      #row .span1,
+      #row .span2,
+      #row .span3,
+      #row .span4,
+      #row .span5,
+      #row .span6,
+      #row .span7,
+      #row .span8,
+      #row .span9,
+      #row .span10,
+      #row .span11,
+      #row .span12 {
+        background: #dfe9f6;
+        text-align: center;
+      }
+
+      .search-item {
+        display: block;
+        padding: 5px 10px;
+        color: rgb(85, 85, 85);
+        text-decoration: none;
+      }
+      .search-item h3 {
+        margin: 0;
+        display: block;
+        font-weight: bold;
+        color: rgb(34, 34, 34);
+      }
+      .search-item h3 span {
+        float: right;
+        font-weight: normal;
+        margin: 0 0 5px 5px;
+        width: 100px;
+        clear: none;
+      }
+    </style>
+  </head>
+  <body style="padding:20px;">
+    <!--panel-->
+    <div class="panel-mod">
+      <div class="panel-hd">
+        <i class="icon-tool-close"></i>
+        <i class="icon-tool-minimize"></i>
+        <i class="icon-tool-maximize"></i>
+        <i class="icon-tool-restore"></i>
+        <i class="icon-tool-toggle-up"></i>
+        <i class="icon-tool-toggle-down"></i>
+        <i class="icon-tool-gear"></i>
+        <i class="icon-tool-prev"></i>
+        <i class="icon-tool-next"></i>
+        <i class="icon-tool-pin"></i>
+        <i class="icon-tool-unpin"></i>
+        <i class="icon-tool-right"></i>
+        <i class="icon-tool-left"></i>
+        <i class="icon-tool-down"></i>
+        <i class="icon-tool-up"></i>
+        <i class="icon-tool-refresh"></i>
+        <i class="icon-tool-plus"></i>
+        <i class="icon-tool-minus"></i>
+        <i class="icon-tool-search"></i>
+        <i class="icon-tool-save"></i>
+        <i class="icon-tool-help"></i>
+        <i class="icon-tool-print"></i>
+        <i class="icon-tool-expand"></i>
+        <i class="icon-tool-collapse"></i>
+        <span>panel</span>
+      </div>
+      <div class="panel-bd">
+        <div>abcdefg</div>
+
+        <!--frame-->
+        <div class="panel-mod" style="left:100px;width:100px;">
+          <div class="panel-hd">
+            <span>title title</span>
+          </div>
+          <div class="panel-bd">
+            <div>abdfdfdfd</div>
+          </div>
+        </div>
+        <!--frame over-->
+
+        <div class="panel-mod" style="width:200px;left:300px;top:-60px;">
+          <div class="panel-hd">
+            <i class="icon-tool-left"></i>
+            <span>菜单</span>
+          </div>
+          <div class="panel-bd">
+            <!--accordion-->
+            <div class="accordion-hd accordion-hd-is-active">
+              <i class="icon-tool-minus"></i>
+              <i class="icon-book-addresses"></i>
+              <span>模块1</span>
+            </div>
+            <div class="accordion-bd" style="display:block;height:80px;">
+              <div class="grid-bd">
+
+                <div class="grid-view grid-with-no-border" style="_overflow-x:hidden;">
+                  <table>
+
+                    <tbody>
+                      <tr class="grid-row">
+                        <td class="grid-cell">
+                          <i class="icon-tree-elbow"></i><i class="icon-book"></i>First
+                        </td>
+                      </tr>
+                      <tr class="grid-row">
+                        <td class="grid-cell">
+                          <i class="icon-tree-elbow"></i><i class="icon-book"></i>First
+                        </td>
+                      </tr>
+                      <tr class="grid-row">
+                        <td class="grid-cell">
+                          <i class="icon-tree-elbow-end"></i><i class="icon-book"></i>First
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-hd">
+              <i class="icon-tool-plus"></i>
+              <span>模块1</span>
+            </div>
+            <div class="accordion-bd">
+
+              <div class="panel-mod">
+                <div class="panel-hd">
+                  <span>菜单</span>
+                </div>
+                <div class="panel-bd" style="height:50px;">
+                </div>
+              </div>
+
+            </div>
+
+            <div class="accordion-hd">
+              <i class="icon-tool-plus"></i>
+              <span>模块1</span>
+            </div>
+            <div class="accordion-bd">
+
+              <div class="panel-mod">
+                <div class="panel-hd">
+                  <span>菜单</span>
+                </div>
+                <div class="panel-bd" style="height:50px;">
+                </div>
+              </div>
+
+            </div>
+            <!--accordion over-->
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!--panel over-->
+
+    <!--tab-->
+    <div class="panel-mod">
+      <ul>
+        <li class="tab-hd">item</li>
+        <li class="tab-hd tab-hd-is-active">item</li>
+        <li class="tab-hd">item</li>
+      </ul>
+      <div class="tab-strip"></div>
+      <div>
+        <div class="tab-bd">abc</div>
+        <div class="tab-bd" style="display:block;">def</div>
+      </div>
+    </div>
+    <!--tab over-->
+
+    <div class="row" id="row">
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+      <div class="span1">1</div>
+    </div>
+    <div id="row">
+      <div class="row">
+        <div class="span2">2</div>
+        <div class="span10">10</div>
+      </div>
+      <div class="row">
+        <div class="span3">3</div>
+        <div class="span3">3</div>
+      </div>
+      <div class="row">
+        <div class="span12">12</div>
+      </div>
+      <div class="row">
+        <div class="span3">3</div>
+        <div class="span3 offset1">3offset1</div>
+      </div>
+      <div class="row">
+        <div class="span11 offset1">11offset1</div>
+      </div>
+    </div>
+
+    <!--form-->
+    <div class="panel-mod" style="width:400px;">
+      <div class="panel-hd">
+        <span>simple form</span>
+      </div>
+      <div class="panel-bd">
+        <div class="form-bd">
+          <div class="group">
+            <label class="form-label" for="text">text:</label>
+            <input id="text" type="text" placeholder="placeholder">
+          </div>
+          <div class="group">
+            <label class="form-label" for="invalid"><span class="form-star">*</span>invalid:</label>
+            <input id="invalid" type="password" class="form-invalid"><i class="icon-exclamation"></i>
+          </div>
+          <div class="group">
+            <label class="form-label" for="comboBox">comboBox:</label>
+            <input id="comboBox" type="text"><i class="icon-form-trigger"></i>
+          </div>
+          <div class="group">
+            <label class="form-label" for="date">date:</label>
+            <input id="date" type="text"><i class="icon-form-date-trigger"></i>
+          </div>
+          <div class="group">
+            <label class="form-label" for="search">search:</label>
+            <input id="search" type="text"><i class="icon-form-clear-trigger"></i><i class="icon-form-search-trigger"></i>
+          </div>
+          <div class="group">
+            <label class="form-label" for="spinner">spinner:</label>
+            <input id="spinner" type="text"><i class="icon-form-spinner-trigger"></i>
+          </div>
+          <div class="group">
+            <label class="form-label" for="textarea">textarea:</label>
+            <textarea id="textarea" rols="10"></textarea>
+          </div>
+          <div class="group">
+            <label class="form-label">radio:</label>
+            <input type="radio" checked="checked" name="sex" value="m" id="m"/><label for="m">男</label>
+            <input type="radio" name="sex" value="f" style="margin-left:20px;" id="f"><label for="f">女</label>
+          </div>
+          <div class="group">
+            <label class="form-label">checkbox:</label>
+            <input type="checkbox" checked="checked" name="some" value="one" id="one"/><label for="one">one</label>
+            <input type="checkbox" name="some" value="two" style="margin-left:30px;" id="two"><label for="two">two</label>
+            <input type="checkbox" checked="checked" name="some" value="three" style="margin-left:30px;" id="three"/><label for="three">three</label>
+          </div>
+          <div class="group">
+            <label class="form-label" for="file"><span class="form-star">*</span>上传文件</label>
+            <input style="height:auto" type="file" name="file" id="file"/>
+          </div>
+          <div class="group">
+            <fieldset>
+              <legend>fieldset</legend>
+              <div class="group">
+                <label class="form-label" for="otherText">otherText:</label>
+                <input id="otherText" type="text">
+              </div>
+            </fieldset>
+          </div>
+        </div>
+        <div class="form-ft">
+          <button class="btn">确定</button>
+          <button class="btn disabled">取消</button>
+        </div>
+      </div>
+    </div>
+    <!--form over-->
+
+    <div class="panel-mod" style="width:500px;">
+      <div class="panel-hd">
+        <span>complex form</span>
+      </div>
+      <div class="panel-bd">
+        <div class="form-bd">
+          <div class="row">
+            <div class="span2">
+              <label class="form-label">span2:</label>
+              <input type="text">
+            </div>
+            <div class="span4">
+              <label class="form-label">span4:</label>
+              <input type="text">
+            </div>
+          </div>
+          <div class="row">
+            <div class="span3">
+              <label class="form-label">span3:</label>
+              <input type="text">
+            </div>
+            <div class="span3">
+              <label class="form-label">span3:</label>
+              <input type="text">
+            </div>
+          </div>
+          <div class="row">
+            <div class="span5">
+              <label class="form-label">span5:</label>
+              <input type="text">
+            </div>
+          </div>
+          <div class="row">
+            <div class="span6">
+              <label class="form-label">span6:</label>
+              <input type="text">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="position:relative;height:600px;">
+      <div class="mask-bg"></div>
+
+      <!--confirm-->
+      <div class="dialog" style="left:20px;top:10px;width:300px;">
+        <i class="icon-tool-close"></i>
+        <div class="form-hd">
+          <span>Confirm</span>
+        </div>
+        <div class="form-bd">
+          <i class="icon-question"></i>
+          <span>Are you sure you want to do that?</span>
+        </div>
+        <div class="form-ft">
+          <button class="btn">确定</button>
+          <button class="btn btn-is-pressed">取消</button>
+        </div>
+      </div>
+      <!--confirm over-->
+      <!--alert-->
+      <div class="dialog" style="left:400px;top:10px;width:300px;">
+        <i class="icon-tool-close"></i>
+        <div class="form-hd">
+          <span>Alert</span>
+        </div>
+        <div class="form-bd">
+          <i class="icon-info"></i>
+          <span>Here is a message with an icon!Here is a message with an icon!Here is a message
+            with an icon!</span>
+        </div>
+        <div class="form-ft">
+          <button class="btn">确定</button>
+        </div>
+      </div>
+      <!--alert over-->
+
+      <!--calendar-->
+      <div class="calendar" data-widget-cid="widget-0" style="z-index: 99; position: absolute; left: 20px; top: 200px; display: block;">
+        <ul class="calendar-navigation" data-role="navigation-container">
+          <li class="calendar-previous-year" data-role="prev-year">&lt;&lt;</li>
+          <li class="calendar-previous-month" data-role="prev-month">&lt;</li>
+          <li class="calendar-month-year" data-role="month-year-container">
+            <span class="month" data-role="mode-month" data-value="11">十二月</span>
+            <span class="year" data-role="mode-year">2012</span>
+          </li>
+          <li class="calendar-next-month" data-role="next-month">&gt;</li>
+          <li class="calendar-next-year" data-role="next-year">&gt;&gt;</li>
+        </ul>
+        <ul class="calendar-control" data-role="pannel-container">
+          <li class="calendar-day calendar-day-0" data-role="day" data-value="0">日</li>
+          <li class="calendar-day calendar-day-1" data-role="day" data-value="1">一</li>
+          <li class="calendar-day calendar-day-2" data-role="day" data-value="2">二</li>
+          <li class="calendar-day calendar-day-3" data-role="day" data-value="3">三</li>
+          <li class="calendar-day calendar-day-4" data-role="day" data-value="4">四</li>
+          <li class="calendar-day calendar-day-5" data-role="day" data-value="5">五</li>
+          <li class="calendar-day calendar-day-6" data-role="day" data-value="6">六</li>
+        </ul>
+        <div class="calendar-data-container" data-role="data-container">
+          <ul class="calendar-date-column">
+            <li class="calendar-day-0 previous-month" data-role="date" data-value="2012-11-25">25</li>
+            <li class="calendar-day-1 previous-month" data-role="date" data-value="2012-11-26">26</li>
+            <li class="calendar-day-2 previous-month" data-role="date" data-value="2012-11-27">27</li>
+            <li class="calendar-day-3 previous-month" data-role="date" data-value="2012-11-28">28</li>
+            <li class="calendar-day-4 previous-month" data-role="date" data-value="2012-11-29">29</li>
+            <li class="calendar-day-5 previous-month" data-role="date" data-value="2012-11-30">30</li>
+            <li class="calendar-day-6 current-month" data-role="date" data-value="2012-12-01">1</li>
+          </ul>
+          <ul class="calendar-date-column">
+            <li class="calendar-day-0 current-month" data-role="date" data-value="2012-12-02">2</li>
+            <li class="calendar-day-1 current-month" data-role="date" data-value="2012-12-03">3</li>
+            <li class="calendar-day-2 current-month" data-role="date" data-value="2012-12-04">4</li>
+            <li class="calendar-day-3 current-month focused-element" data-role="date"
+            data-value="2012-12-05">5</li>
+            <li class="calendar-day-4 current-month" data-role="date" data-value="2012-12-06">6</li>
+            <li class="calendar-day-5 current-month disabled-date" data-role="date" data-value="2012-12-07">7</li>
+            <li class="calendar-day-6 current-month disabled-date" data-role="date" data-value="2012-12-08">8</li>
+          </ul>
+          <ul class="calendar-date-column">
+            <li class="calendar-day-0 current-month" data-role="date" data-value="2012-12-09">9</li>
+            <li class="calendar-day-1 current-month" data-role="date" data-value="2012-12-10">10</li>
+            <li class="calendar-day-2 current-month" data-role="date" data-value="2012-12-11">11</li>
+            <li class="calendar-day-3 current-month" data-role="date" data-value="2012-12-12">12</li>
+            <li class="calendar-day-4 current-month" data-role="date" data-value="2012-12-13">13</li>
+            <li class="calendar-day-5 current-month disabled-date" data-role="date" data-value="2012-12-14">14</li>
+            <li class="calendar-day-6 current-month disabled-date" data-role="date" data-value="2012-12-15">15</li>
+          </ul>
+          <ul class="calendar-date-column">
+            <li class="calendar-day-0 current-month" data-role="date" data-value="2012-12-16">16</li>
+            <li class="calendar-day-1 current-month" data-role="date" data-value="2012-12-17">17</li>
+            <li class="calendar-day-2 current-month" data-role="date" data-value="2012-12-18">18</li>
+            <li class="calendar-day-3 current-month" data-role="date" data-value="2012-12-19">19</li>
+            <li class="calendar-day-4 current-month" data-role="date" data-value="2012-12-20">20</li>
+            <li class="calendar-day-5 current-month" data-role="date" data-value="2012-12-21">21</li>
+            <li class="calendar-day-6 current-month" data-role="date" data-value="2012-12-22">22</li>
+          </ul>
+          <ul class="calendar-date-column">
+            <li class="calendar-day-0 current-month  " data-role="date" data-value="2012-12-23">23</li>
+            <li class="calendar-day-1 current-month  " data-role="date" data-value="2012-12-24">24</li>
+            <li class="calendar-day-2 current-month  " data-role="date" data-value="2012-12-25">25</li>
+            <li class="calendar-day-3 current-month  " data-role="date" data-value="2012-12-26">26</li>
+            <li class="calendar-day-4 current-month  " data-role="date" data-value="2012-12-27">27</li>
+            <li class="calendar-day-5 current-month  " data-role="date" data-value="2012-12-28">28</li>
+            <li class="calendar-day-6 current-month  " data-role="date" data-value="2012-12-29">29</li>
+          </ul>
+          <ul class="calendar-date-column">
+            <li class="calendar-day-0 current-month  " data-role="date" data-value="2012-12-30">30</li>
+            <li class="calendar-day-1 current-month  " data-role="date" data-value="2012-12-31">31</li>
+            <li class="calendar-day-2 next-month  " data-role="date" data-value="2013-01-01">1</li>
+            <li class="calendar-day-3 next-month  " data-role="date" data-value="2013-01-02">2</li>
+            <li class="calendar-day-4 next-month  " data-role="date" data-value="2013-01-03">3</li>
+            <li class="calendar-day-5 next-month  " data-role="date" data-value="2013-01-04">4</li>
+            <li class="calendar-day-6 next-month  " data-role="date" data-value="2013-01-05">5</li>
+          </ul>
+        </div>
+        <div class="calendar-time" data-role="time-container">
+          <input type="text" value="24">时
+          <input type="text" value="60">分
+          <input type="text" value="60">秒
+          <a class="btn" data-role="today">现在</a>
+        </div>
+        <div class="calendar-footer">
+          <button class="btn">确定</button>
+          <button class="btn">取消</button>
+        </div>
+        <div class="calendar-overlay" style="display:block;position: absolute;bottom: 60px;">
+          <ul>
+            <li>0</li>
+            <li>5</li>
+            <li>10</li>
+            <li class="calendar-overlay-is-active">15</li>
+            <li>20</li>
+            <li>25</li>
+            <li>30</li>
+            <li>35</li>
+            <li>40</li>
+            <li>45</li>
+            <li>50</li>
+            <li>55</li>
+          </ul>
+          <div class="calendar-overlay-triangle-shadow" style="left:10px;"></div>
+          <div class="calendar-overlay-triangle" style="left:10px;"></div>
+
+          <div class="calendar-overlay-triangle-shadow" style="left:50px;"></div>
+          <div class="calendar-overlay-triangle" style="left:50px;"></div>
+
+          <div class="calendar-overlay-triangle-shadow" style="left:90px;"></div>
+          <div class="calendar-overlay-triangle" style="left:90px;"></div>
+        </div>
+      </div>
+
+      <!--calendar-->
+      <div class="calendar" data-widget-cid="widget-0" style="z-index: 99; position: absolute; left: 220px; top: 200px; display: block;">
+        <ul class="calendar-navigation" data-role="navigation-container">
+          <li class="calendar-previous-year" data-role="prev-year">&lt;&lt;</li>
+          <li class="calendar-previous-month" data-role="prev-month">&lt;</li>
+          <li class="calendar-month-year" data-role="month-year-container">
+            <span class="month" data-role="mode-month" data-value="11">十二月</span>
+            <span class="year" data-role="mode-year">2012</span>
+          </li>
+          <li class="calendar-next-month" data-role="next-month">&gt;</li>
+          <li class="calendar-next-year" data-role="next-year">&gt;&gt;</li>
+        </ul>
+        <ul class="calendar-control" data-role="pannel-container">
+          <li class="calendar-day calendar-day-0" data-role="day" data-value="0">日</li>
+          <li class="calendar-day calendar-day-1" data-role="day" data-value="1">一</li>
+          <li class="calendar-day calendar-day-2" data-role="day" data-value="2">二</li>
+          <li class="calendar-day calendar-day-3" data-role="day" data-value="3">三</li>
+          <li class="calendar-day calendar-day-4" data-role="day" data-value="4">四</li>
+          <li class="calendar-day calendar-day-5" data-role="day" data-value="5">五</li>
+          <li class="calendar-day calendar-day-6" data-role="day" data-value="6">六</li>
+        </ul>
+        <div class="calendar-data-container" data-role="data-container">
+          <ul class="calendar-date-column">
+            <li class="calendar-day-0 previous-month" data-role="date" data-value="2012-11-25">25</li>
+            <li class="calendar-day-1 previous-month" data-role="date" data-value="2012-11-26">26</li>
+            <li class="calendar-day-2 previous-month" data-role="date" data-value="2012-11-27">27</li>
+            <li class="calendar-day-3 previous-month" data-role="date" data-value="2012-11-28">28</li>
+            <li class="calendar-day-4 previous-month" data-role="date" data-value="2012-11-29">29</li>
+            <li class="calendar-day-5 previous-month" data-role="date" data-value="2012-11-30">30</li>
+            <li class="calendar-day-6 current-month" data-role="date" data-value="2012-12-01">1</li>
+          </ul>
+          <ul class="calendar-date-column">
+            <li class="calendar-day-0 current-month" data-role="date" data-value="2012-12-02">2</li>
+            <li class="calendar-day-1 current-month" data-role="date" data-value="2012-12-03">3</li>
+            <li class="calendar-day-2 current-month" data-role="date" data-value="2012-12-04">4</li>
+            <li class="calendar-day-3 current-month focused-element" data-role="date"
+            data-value="2012-12-05">5</li>
+            <li class="calendar-day-4 current-month" data-role="date" data-value="2012-12-06">6</li>
+            <li class="calendar-day-5 current-month disabled-date" data-role="date" data-value="2012-12-07">7</li>
+            <li class="calendar-day-6 current-month disabled-date" data-role="date" data-value="2012-12-08">8</li>
+          </ul>
+          <ul class="calendar-date-column">
+            <li class="calendar-day-0 current-month" data-role="date" data-value="2012-12-09">9</li>
+            <li class="calendar-day-1 current-month" data-role="date" data-value="2012-12-10">10</li>
+            <li class="calendar-day-2 current-month" data-role="date" data-value="2012-12-11">11</li>
+            <li class="calendar-day-3 current-month" data-role="date" data-value="2012-12-12">12</li>
+            <li class="calendar-day-4 current-month" data-role="date" data-value="2012-12-13">13</li>
+            <li class="calendar-day-5 current-month disabled-date" data-role="date" data-value="2012-12-14">14</li>
+            <li class="calendar-day-6 current-month disabled-date" data-role="date" data-value="2012-12-15">15</li>
+          </ul>
+          <ul class="calendar-date-column">
+            <li class="calendar-day-0 current-month" data-role="date" data-value="2012-12-16">16</li>
+            <li class="calendar-day-1 current-month" data-role="date" data-value="2012-12-17">17</li>
+            <li class="calendar-day-2 current-month" data-role="date" data-value="2012-12-18">18</li>
+            <li class="calendar-day-3 current-month" data-role="date" data-value="2012-12-19">19</li>
+            <li class="calendar-day-4 current-month" data-role="date" data-value="2012-12-20">20</li>
+            <li class="calendar-day-5 current-month" data-role="date" data-value="2012-12-21">21</li>
+            <li class="calendar-day-6 current-month" data-role="date" data-value="2012-12-22">22</li>
+          </ul>
+          <ul class="calendar-date-column">
+            <li class="calendar-day-0 current-month  " data-role="date" data-value="2012-12-23">23</li>
+            <li class="calendar-day-1 current-month  " data-role="date" data-value="2012-12-24">24</li>
+            <li class="calendar-day-2 current-month  " data-role="date" data-value="2012-12-25">25</li>
+            <li class="calendar-day-3 current-month  " data-role="date" data-value="2012-12-26">26</li>
+            <li class="calendar-day-4 current-month  " data-role="date" data-value="2012-12-27">27</li>
+            <li class="calendar-day-5 current-month  " data-role="date" data-value="2012-12-28">28</li>
+            <li class="calendar-day-6 current-month  " data-role="date" data-value="2012-12-29">29</li>
+          </ul>
+          <ul class="calendar-date-column">
+            <li class="calendar-day-0 current-month  " data-role="date" data-value="2012-12-30">30</li>
+            <li class="calendar-day-1 current-month  " data-role="date" data-value="2012-12-31">31</li>
+            <li class="calendar-day-2 next-month  " data-role="date" data-value="2013-01-01">1</li>
+            <li class="calendar-day-3 next-month  " data-role="date" data-value="2013-01-02">2</li>
+            <li class="calendar-day-4 next-month  " data-role="date" data-value="2013-01-03">3</li>
+            <li class="calendar-day-5 next-month  " data-role="date" data-value="2013-01-04">4</li>
+            <li class="calendar-day-6 next-month  " data-role="date" data-value="2013-01-05">5</li>
+          </ul>
+        </div>
+        <div class="calendar-footer" data-role="time-container">
+          <button class="btn" data-role="today">今天</button>
+        </div>
+      </div>
+      <!--second-->
+      <div class="calendar" data-widget-cid="widget-0" style="z-index: 99; position: absolute; left: 420px; top: 200px;">
+        <ul class="calendar-navigation" data-role="navigation-container">
+          <li class="calendar-previous-year" data-role="prev-year">&lt;&lt;</li>
+          <li class="calendar-previous-month" data-role="prev-month">&lt;</li>
+          <li class="calendar-month-year" data-role="month-year-container">
+            <span class="month focused-element" data-role="mode-month" data-value="11">十二月</span>
+            <span class="year" data-role="mode-year">2010</span>
+          </li>
+          <li class="calendar-next-month" data-role="next-month">&gt;</li>
+          <li class="calendar-next-year" data-role="next-year">&gt;&gt;</li>
+        </ul>
+        <ul class="calendar-control" data-role="pannel-container"></ul>
+        <div class="calendar-data-container" data-role="data-container">
+          <ul class="calendar-month-column">
+            <li data-role="month" data-value="0">一月</li>
+            <li data-role="month" data-value="1">二月</li>
+            <li data-role="month" data-value="2">三月</li>
+          </ul>
+          <ul class="calendar-month-column">
+            <li data-role="month" data-value="3">四月</li>
+            <li data-role="month" data-value="4">五月</li>
+            <li data-role="month" data-value="5">六月</li>
+          </ul>
+          <ul class="calendar-month-column">
+            <li data-role="month" data-value="6">七月</li>
+            <li data-role="month" data-value="7">八月</li>
+            <li data-role="month" data-value="8">九月</li>
+          </ul>
+          <ul class="calendar-month-column">
+            <li data-role="month" data-value="9">十月</li>
+            <li data-role="month" data-value="10">十一月</li>
+            <li data-role="month" data-value="11" class="focused-element">十二月</li>
+          </ul>
+        </div>
+        <div class="calendar-footer" data-role="time-container">
+          <button class="btn" data-role="today">Today</button>
+        </div>
+      </div>
+      <!--third-->
+      <div class="calendar" data-widget-cid="widget-0" style="z-index: 99; position: absolute; left: 620px; top: 200px; ">
+        <ul class="calendar-navigation" data-role="navigation-container">
+          <li class="calendar-previous-year" data-role="prev-year">&lt;&lt;</li>
+          <li class="calendar-previous-month" data-role="prev-month">&lt;</li>
+          <li class="calendar-month-year" data-role="month-year-container">
+            <span class="month" data-role="mode-month" data-value="11">十二月</span>
+            <span class="year" data-role="mode-year">2010</span>
+          </li>
+          <li class="calendar-next-month" data-role="next-month">&gt;</li>
+          <li class="calendar-next-year" data-role="next-year">&gt;&gt;</li>
+        </ul>
+        <ul class="calendar-control" data-role="pannel-container"></ul>
+        <div class="calendar-data-container" data-role="data-container">
+          <ul class="calendar-year-column">
+            <li data-role="previous-10-year" data-value="2000">. . .</li>
+            <li data-role="year" data-value="2004">2004</li>
+            <li data-role="year" data-value="2005">2005</li>
+          </ul>
+          <ul class="calendar-year-column">
+            <li data-role="year" data-value="2006">2006</li>
+            <li data-role="year" data-value="2007">2007</li>
+            <li data-role="year" data-value="2008">2008</li>
+          </ul>
+          <ul class="calendar-year-column">
+            <li data-role="year" data-value="2009">2009</li>
+            <li data-role="year" data-value="2010" class="focused-element">2010</li>
+            <li data-role="year" data-value="2011">2011</li>
+          </ul>
+          <ul class="calendar-year-column">
+            <li data-role="year" data-value="2012">2012</li>
+            <li data-role="year" data-value="2013">2013</li>
+            <li data-role="next-10-year" data-value="2020">. . .</li>
+          </ul>
+        </div>
+        <div class="calendar-footer" data-role="time-container">
+          <button class="btn" data-role="today">Today</button>
+        </div>
+      </div>
+      <!--calendar over-->
+
+      <!--combo box-->
+      <div style="z-index:99;position:absolute;left:20px;top:450px;">
+        <input type="text"><i class="icon-form-trigger"></i>
+        <div class="layer">
+          <ul class="list">
+            <li>aaa</li>
+            <li class="list-item-is-selected">bbb</li>
+            <li>ccc</li>
+          </ul>
+        </div>
+      </div>
+      <!--combo box over-->
+      <!--multi combo box-->
+      <div style="z-index:99;position:absolute;left:220px;top:450px;">
+        <div class="panel-mod" style="width:200px;">
+          <div class="panel-hd">多选框</div>
+          <div class="panel-bd">
+            <ul class="list">
+              <li>aaa</li>
+              <li class="list-item-is-selected">bbb</li>
+              <li>ccc</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--multi combo box over-->
+      <!--multi column combo box-->
+      <div style="width:400px;z-index:99;position:absolute;left:430px;top:450px;">
+        <input style="width:375px;" type="text"><i class="icon-form-trigger"></i>
+        <div class="layer">
+          <ul class="list" style="height:200px;">
+            <li><a href="#" class="search-item">
+              <h3><span>May 20, 2011<br>by cayenne_08</span>Using XTemplate to send XML</h3>
+              This is what I am trying to do to post custom XML on editor form submit:
+            </a></li>
+            <li class="list-item-is-selected"><a href="#" class="search-item">
+              <h3><span>May 20, 2011<br>by cayenne_08</span>Using XTemplate to send XML</h3>
+              This is what I am trying to do to post custom XML on editor form submit:
+            </a></li>
+            <li><a href="#" class="search-item">
+              <h3><span>May 20, 2011<br>by cayenne_08</span>Using XTemplate to send XML</h3>
+              This is what I am trying to do to post custom XML on editor form submit:
+            </a></li>
+          </ul>
+          <div class="toolbar-ft">
+            <span class="toolbar-text-right">共100条记录，每页10条</span>
+            <i class="icon-grid-page-first-disabled"></i>
+            <i class="icon-grid-page-prev-disabled"></i>
+            <i class="toolbar-separator"></i>
+            <span class="toolbar-text">当前第</span>
+            <input style="width:40px;" type="text" value="1">
+            <span class="toolbar-text">/10页</span>
+            <i class="toolbar-separator"></i>
+            <i class="icon-grid-page-next"></i>
+            <i class="icon-grid-page-last"></i>
+            <i class="toolbar-separator"></i>
+            <i class="icon-grid-refresh toolbar-icon-is-pressed"></i>
+          </div>
+        </div>
+      </div>
+      <!--multi column combo box over-->
+
+      <!--toolbar-->
+      <div style="z-index:99;position:absolute;left:450px;top:370px;">
+        <div class="toolbar">
+          <div class="toolbar-btn">
+            <i class="icon-book"></i>
+            <span>Users</span>
+            <i class="icon-arrow"></i>
+          </div>
+          <i class="toolbar-separator"></i>
+
+          <div class="toolbar-btn">
+            <i class="icon-book"></i>
+          </div>
+          <div class="toolbar-btn toolbar-btn-is-pressed">
+            <i class="icon-book"></i>
+          </div>
+          <i class="toolbar-separator"></i>
+
+          <div class="toolbar-btn">
+            <i class="icon-book"></i>
+            <span>新建</span>
+          </div>
+          <div class="toolbar-btn disabled">
+            <i class="icon-book"></i>
+            <span>新建</span>
+          </div>
+          <div class="toolbar-btn toolbar-btn-is-pressed">
+            <i class="icon-book"></i>
+            <span>新建</span>
+          </div>
+          <i class="toolbar-separator"></i>
+
+          <div class="toolbar-btn">
+            <span>Users</span>
+          </div>
+          <input type="text" placeholder="select a user"><i class="icon-form-trigger"></i>
+        </div>
+      </div>
+      <!--toolbar over-->
+
+      <!--menu-->
+      <div style="z-index:99;position:absolute;left:455px;top:398px;width:90px;">
+        <div class="layer">
+          <ul class="menu menu-with-pic">
+            <li class="menu-item-is-selected">
+              <i class="icon-book menu-item-pic"></i>
+              <span>Users</span>
+              <i class="icon-menu-parent"></i>
+            </li>
+            <li>
+              <span>Users</span>
+            </li>
+            <li>
+              <span>User</span>
+            </li>
+            <li>
+              <span>Users</span>
+              <i class="icon-menu-parent"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--menu over-->
+
+      <!--sub menu-->
+      <div style="z-index:99;position:absolute;left:542px;top:401px;width:70px;">
+        <div class="layer">
+          <ul class="menu">
+            <li>
+              <span>Users</span>
+            </li>
+            <li class="menu-item-is-selected">
+              <span>Users</span>
+              <i class="icon-menu-parent"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div style="z-index:99;position:absolute;left:610px;top:435px;width:70px;">
+        <div class="layer">
+          <ul class="menu">
+            <li>
+              <span>Users</span>
+            </li>
+            <li>
+              <span>Users</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--sub menu over-->
+
+    </div>
+
+  </body>
+</html>
