@@ -1,65 +1,76 @@
 /*form*/
-.form-hd {
-  @extend .hd;
 
-  span {
-    font-weight: bold;
-    color: #04468c;
-  }
-}
+$form-label-width: 95px !default;
+
 .form-bd {
   @extend .bd;
-  padding: 10px;
+  padding-top: 10px;
 }
-.form-label {
-  display: inline-block;
-  width: 70px;
-  text-align: right;
-}
-.form-star {
-  font-weight: bold;
-  color: red;
-}
-
 .form-ft {
   padding: 3px 0 4px;
   border-top: 1px solid #b5b8c8;
   text-align: center;
 }
 
-input {
-  vertical-align:middle;
-  //IE6下高度有点大
-  _height:13px;
+.form-item {
+  @include clearfix;
+  padding: 0 5px 10px $form-label-width;
 }
+.form-label {
+  display: inline-block;
+  width: $form-label-width;
+  margin-left: - $form-label-width;
+  text-align: right;
+}
+.form-required {
+  font-weight: bold;
+  color: red;
+}
+.form-explain {
+  padding: 3px 0 0 3px;
+  color: #999;
+}
+
 textarea,
-input[type="text"],
-input[type="password"] {
+.input {
   padding: 1px 3px;
   border: 1px solid #b5b8c8;
   background: #fff url('../images/text-bg.gif') repeat-x 0 0;
 }
-input.form-invalid {
-  border:1px solid #cc3300;
-  background: #fff url('../images/invalid_line.gif') repeat-x bottom;
-}
 
 textarea:focus,
-input[type="text"]:focus,
-input[type="password"]:focus {
+.input:focus {
   border-color: #7eadd9;
   outline: none;
 }
-input[type="text"],
-input[type="password"] {
+
+.form-item-error {
+  .input, textarea {
+    border:1px solid #cc3300;
+    background: #fff url('../images/invalid_line.gif') repeat-x bottom;
+  }
+  .form-explain {
+    padding-left: 20px;
+    color: #ff5243;
+    background: url('../images/exclamation.gif') no-repeat 0 2px;
+  }
+}
+
+.input {
   //firefox默认高度过大
   height: 15px;
 }
 
 @for $i from 2 through 12 {
-  .form-bd .span#{$i} input {
-    width: #{40 + 80 * ($i - 2)}px;
+  .form-bd .span#{$i} .input {
+    width: #{20 + 80 * ($i - 2) }px;
   }
+}
+
+input {
+  vertical-align:middle;
+  //IE6下高度有点大
+  _height:13px;
 }
 
 textarea {
@@ -68,7 +79,7 @@ textarea {
 }
 
 fieldset {
-  padding: 10px;
+  margin: 10px;
   border: 1px solid #b5b8c8;
 }
 fieldset legend {

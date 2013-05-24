@@ -221,64 +221,80 @@
         <span>simple form</span>
       </div>
       <div class="panel-bd">
-        <div class="form-bd">
-          <div class="group">
-            <label class="form-label" for="text">text:</label>
-            <input id="text" type="text" placeholder="placeholder">
-          </div>
-          <div class="group">
-            <label class="form-label" for="invalid"><span class="form-star">*</span>invalid:</label>
-            <input id="invalid" type="password" class="form-invalid"><i class="icon-exclamation"></i>
-          </div>
-          <div class="group">
-            <label class="form-label" for="comboBox">comboBox:</label>
-            <input id="comboBox" type="text"><i class="icon-form-trigger"></i>
-          </div>
-          <div class="group">
-            <label class="form-label" for="date">date:</label>
-            <input id="date" type="text"><i class="icon-form-date-trigger"></i>
-          </div>
-          <div class="group">
-            <label class="form-label" for="search">search:</label>
-            <input id="search" type="text"><i class="icon-form-clear-trigger"></i><i class="icon-form-search-trigger"></i>
-          </div>
-          <div class="group">
-            <label class="form-label" for="spinner">spinner:</label>
-            <input id="spinner" type="text"><i class="icon-form-spinner-trigger"></i>
-          </div>
-          <div class="group">
-            <label class="form-label" for="textarea">textarea:</label>
-            <textarea id="textarea" rols="10"></textarea>
-          </div>
-          <div class="group">
-            <label class="form-label">radio:</label>
-            <input type="radio" checked="checked" name="sex" value="m" id="m"/><label for="m">男</label>
-            <input type="radio" name="sex" value="f" style="margin-left:20px;" id="f"><label for="f">女</label>
-          </div>
-          <div class="group">
-            <label class="form-label">checkbox:</label>
-            <input type="checkbox" checked="checked" name="some" value="one" id="one"/><label for="one">one</label>
-            <input type="checkbox" name="some" value="two" style="margin-left:30px;" id="two"><label for="two">two</label>
-            <input type="checkbox" checked="checked" name="some" value="three" style="margin-left:30px;" id="three"/><label for="three">three</label>
-          </div>
-          <div class="group">
-            <label class="form-label" for="file"><span class="form-star">*</span>上传文件</label>
-            <input style="height:auto" type="file" name="file" id="file"/>
-          </div>
-          <div class="group">
+        <form action="" method="get">
+          <div class="form-bd">
+            <div class="form-item">
+              <label for="text" class="form-label"><span class="form-required">*</span>text:</label>
+              <input id="text" name="text" class="input" type="text">
+              <div class="form-explain">请输入文字</div>
+            </div>
+            <div class="form-item">
+              <label for="disabled" class="form-label">disabled:</label>
+              <input id="disabled" name="disabled" class="input" type="text" disabled>
+            </div>
+            <div class="form-item form-item-error">
+              <label for="invalid" class="form-label"><span class="form-required">*</span>invalid:</label>
+              <input id="invalid" name="invalid" class="input" type="password">
+              <div class="form-explain">不能为空</div>
+            </div>
+
+            <div class="form-item">
+              <label class="form-label" for="comboBox">comboBox:</label>
+              <input class="input" id="comboBox" type="text"><i class="icon-form-trigger"></i>
+            </div>
+            <div class="form-item">
+              <label class="form-label" for="date">date:</label>
+              <input class="input" id="date" type="text"><i class="icon-form-date-trigger"></i>
+            </div>
+            <div class="form-item">
+              <label class="form-label" for="search">search:</label>
+              <input class="input" id="search" type="text"><i class="icon-form-clear-trigger"></i><i class="icon-form-search-trigger"></i>
+            </div>
+            <div class="form-item">
+              <label class="form-label" for="spinner">spinner:</label>
+              <input class="input" id="spinner" type="text"><i class="icon-form-spinner-trigger"></i>
+            </div>
+
+            <div class="form-item">
+              <label for="textarea" class="form-label">textarea:</label>
+              <textarea id="textarea" name="textarea" rols="10"></textarea>
+            </div>
+            <div class="form-item">
+              <label class="form-label">radio:</label>
+              <input name="sex" id="m" value="m" type="radio" checked="checked"/><label for="m">男</label>
+              <input name="sex" id="f" value="f" type="radio" style="margin-left:20px;"><label for="f">女</label>
+            </div>
+            <div class="form-item">
+              <label class="form-label">checkbox:</label>
+              <input name="some" id="one" value="one" type="checkbox" checked="checked" /><label for="one">one</label>
+              <input name="some" id="two" value="two" type="checkbox" style="margin-left:30px;"><label for="two">two</label>
+              <input name="some" id="three" value="three" type="checkbox" checked="checked" style="margin-left:30px;"/><label for="three">three</label>
+            </div>
+            <div class="form-item">
+              <label class="form-label"><span class="form-required">*</span>select：</label>
+              <select name="select">
+                <option value="">请选择</option>
+                <option value="option1">option1</option>
+                <option value="option2">option2</option>
+              </select>
+            </div>
+            <div class="form-item">
+              <label class="form-label" for="file"><span class="form-required">*</span>上传文件</label>
+              <input style="_height:auto" type="file" name="file" id="file"/>
+            </div>
             <fieldset>
               <legend>fieldset</legend>
-              <div class="group">
+              <div class="form-item">
                 <label class="form-label" for="otherText">otherText:</label>
-                <input id="otherText" type="text">
+                <input class="input" id="otherText" type="text">
               </div>
             </fieldset>
           </div>
-        </div>
-        <div class="form-ft">
-          <button class="btn">确定</button>
-          <button class="btn disabled">取消</button>
-        </div>
+          <div class="form-ft">
+            <input class="btn" type="submit" value="确定"/>
+            <input class="btn disabled" type="button" value="取消"/>
+          </div>
+        </form>
       </div>
     </div>
     <!--form over-->
@@ -291,34 +307,46 @@
         <div class="form-bd">
           <div class="row">
             <div class="span2">
-              <label class="form-label">span2:</label>
-              <input type="text">
+              <div class="form-item">
+                <label class="form-label">span2:</label>
+                <input class="input" type="text">
+              </div>
             </div>
             <div class="span4">
-              <label class="form-label">span4:</label>
-              <input type="text">
+              <div class="form-item">
+                <label class="form-label">span4:</label>
+                <input class="input" type="text">
+              </div>
             </div>
           </div>
           <div class="row">
             <div class="span3">
-              <label class="form-label">span3:</label>
-              <input type="text">
+              <div class="form-item">
+                <label class="form-label">span3:</label>
+                <input class="input" type="text">
+              </div>
             </div>
             <div class="span3">
-              <label class="form-label">span3:</label>
-              <input type="text">
+              <div class="form-item">
+                <label class="form-label">span3:</label>
+                <input class="input" type="text">
+              </div>
             </div>
           </div>
           <div class="row">
             <div class="span5">
-              <label class="form-label">span5:</label>
-              <input type="text">
+              <div class="form-item">
+                <label class="form-label">span5:</label>
+                <input class="input" type="text">
+              </div>
             </div>
           </div>
           <div class="row">
             <div class="span6">
-              <label class="form-label">span6:</label>
-              <input type="text">
+              <div class="form-item">
+                <label class="form-label">span6:</label>
+                <input class="input" type="text">
+              </div>
             </div>
           </div>
         </div>
@@ -331,14 +359,14 @@
       <!--confirm-->
       <div class="dialog" style="left:20px;top:10px;width:300px;">
         <i class="icon-tool-close"></i>
-        <div class="form-hd">
+        <div class="dialog-hd">
           <span>Confirm</span>
         </div>
-        <div class="form-bd">
+        <div class="dialog-bd">
           <i class="icon-question"></i>
           <span>Are you sure you want to do that?</span>
         </div>
-        <div class="form-ft">
+        <div class="dialog-ft">
           <button class="btn">确定</button>
           <button class="btn btn-is-pressed">取消</button>
         </div>
@@ -347,15 +375,15 @@
       <!--alert-->
       <div class="dialog" style="left:400px;top:10px;width:300px;">
         <i class="icon-tool-close"></i>
-        <div class="form-hd">
+        <div class="dialog-hd">
           <span>Alert</span>
         </div>
-        <div class="form-bd">
+        <div class="dialog-bd">
           <i class="icon-info"></i>
           <span>Here is a message with an icon!Here is a message with an icon!Here is a message
             with an icon!</span>
         </div>
-        <div class="form-ft">
+        <div class="dialog-ft">
           <button class="btn">确定</button>
         </div>
       </div>
@@ -440,9 +468,9 @@
           </ul>
         </div>
         <div class="calendar-time" data-role="time-container">
-          <input type="text" value="24">时
-          <input type="text" value="60">分
-          <input type="text" value="60">秒
+          <input class="input" type="text" value="24">时
+          <input class="input" type="text" value="60">分
+          <input class="input" type="text" value="60">秒
           <a class="btn" data-role="today">现在</a>
         </div>
         <div class="calendar-footer">
@@ -639,7 +667,7 @@
 
       <!--combo box-->
       <div style="z-index:99;position:absolute;left:20px;top:450px;">
-        <input type="text"><i class="icon-form-trigger"></i>
+        <input class="input" type="text"><i class="icon-form-trigger"></i>
         <div class="layer">
           <ul class="list">
             <li>aaa</li>
@@ -665,7 +693,7 @@
       <!--multi combo box over-->
       <!--multi column combo box-->
       <div style="width:400px;z-index:99;position:absolute;left:430px;top:450px;">
-        <input style="width:375px;" type="text"><i class="icon-form-trigger"></i>
+        <input class="input" style="width:375px;" type="text"><i class="icon-form-trigger"></i>
         <div class="layer">
           <ul class="list" style="height:200px;">
             <li><a href="#" class="search-item">
@@ -687,7 +715,7 @@
             <i class="icon-grid-page-prev-disabled"></i>
             <i class="toolbar-separator"></i>
             <span class="toolbar-text">当前第</span>
-            <input style="width:40px;" type="text" value="1">
+            <input class="input" style="width:40px;" type="text" value="1">
             <span class="toolbar-text">/10页</span>
             <i class="toolbar-separator"></i>
             <i class="icon-grid-page-next"></i>
@@ -734,7 +762,7 @@
           <div class="toolbar-btn">
             <span>Users</span>
           </div>
-          <input type="text" placeholder="select a user"><i class="icon-form-trigger"></i>
+          <input class="input" type="text" placeholder="select a user"><i class="icon-form-trigger"></i>
         </div>
       </div>
       <!--toolbar over-->

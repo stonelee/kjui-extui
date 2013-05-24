@@ -1,12 +1,9 @@
 /*layout*/
 
 /*布局*/
-.group {
+.row {
   @include clearfix;
   margin-bottom: 10px;
-}
-.row {
-  @extend .group;
   margin-left: -20px;
 }
 
@@ -233,6 +230,22 @@
     //取消chrome默认样式
     outline: none;
   }
+}
+.dialog-hd {
+  @extend .hd;
+
+  span {
+    font-weight: bold;
+    color: #04468c;
+  }
+}
+.dialog-bd {
+  @extend .bd;
+  padding: 10px;
+}
+.dialog-ft {
+  padding: 3px 0 4px;
+  text-align: center;
 }
 
 /*layer*/

@@ -447,7 +447,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.unselectable, .hd, .panel-hd, .accordion-hd, .tab-hd, .form-hd, .grid-hd, .tree-item {
+.unselectable, .hd, .panel-hd, .accordion-hd, .tab-hd, .dialog-hd, .grid-hd, .tree-item {
   user-select: none;
   -o-user-select: none;
   -ms-user-select: none;
@@ -460,12 +460,12 @@ table {
   opacity: 0.3;
   cursor: default!important; }
 
-.oneline, .hd, .panel-hd, .accordion-hd, .tab-hd, .form-hd, .grid-hd, .grid-cell {
+.oneline, .hd, .panel-hd, .accordion-hd, .tab-hd, .dialog-hd, .grid-hd, .grid-cell {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-.relative, .mod, .hd, .panel-hd, .accordion-hd, .tab-hd, .form-hd, .grid-hd, .bd, .panel-bd, .tab-bd, .accordion-bd, .form-bd, .grid-bd, .panel-mod, .dialog, .layer {
+.relative, .mod, .hd, .panel-hd, .accordion-hd, .tab-hd, .dialog-hd, .grid-hd, .bd, .panel-bd, .tab-bd, .accordion-bd, .dialog-bd, .form-bd, .grid-bd, .panel-mod, .dialog, .layer {
   position: relative;
   _zoom: 1; }
 
@@ -527,15 +527,6 @@ ul {
   background-position: 0 0; }
 
 /*自定义图标*/
-.icon-exclamation {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  vertical-align: middle;
-  background-image: url("../images/exclamation.gif");
-  background-repeat: no-repeat;
-  background-position: 0 0; }
-
 .icon-book-addresses {
   display: inline-block;
   width: 16px;
@@ -556,17 +547,15 @@ ul {
 
 /*layout*/
 /*布局*/
-.group, .row {
+.row {
   *zoom: 1;
-  margin-bottom: 10px; }
-  .group:before, .row:before, .group:after, .row:after {
+  margin-bottom: 10px;
+  margin-left: -20px; }
+  .row:before, .row:after {
     content: " ";
     display: table; }
-  .group:after, .row:after {
+  .row:after {
     clear: both; }
-
-.row {
-  margin-left: -20px; }
 
 .span1 {
   float: left;
@@ -677,7 +666,7 @@ ul {
   margin-left: 980px; }
 
 /*basic*/
-.mod, .hd, .panel-hd, .accordion-hd, .tab-hd, .form-hd, .grid-hd, .bd, .panel-bd, .tab-bd, .accordion-bd, .form-bd, .grid-bd, .panel-mod, .dialog, .layer {
+.mod, .hd, .panel-hd, .accordion-hd, .tab-hd, .dialog-hd, .grid-hd, .bd, .panel-bd, .tab-bd, .accordion-bd, .dialog-bd, .form-bd, .grid-bd, .panel-mod, .dialog, .layer {
   overflow: hidden; }
 
 /*panel*/
@@ -1124,6 +1113,17 @@ ul {
   .dialog:focus {
     outline: none; }
 
+.dialog-hd span {
+  font-weight: bold;
+  color: #04468c; }
+
+.dialog-bd {
+  padding: 10px; }
+
+.dialog-ft {
+  padding: 3px 0 4px;
+  text-align: center; }
+
 /*layer*/
 .layer {
   border: 1px solid #98c0f4;
@@ -1172,91 +1172,102 @@ ul.menu {
   margin-left: 20px; }
 
 /*form*/
-.form-hd span {
-  font-weight: bold;
-  color: #04468c; }
-
 .form-bd {
-  padding: 10px; }
-
-.form-label {
-  display: inline-block;
-  width: 70px;
-  text-align: right; }
-
-.form-star {
-  font-weight: bold;
-  color: red; }
+  padding-top: 10px; }
 
 .form-ft {
   padding: 3px 0 4px;
   border-top: 1px solid #b5b8c8;
   text-align: center; }
 
-input {
-  vertical-align: middle;
-  _height: 13px; }
+.form-item {
+  *zoom: 1;
+  padding: 0 5px 10px 95px; }
+  .form-item:before, .form-item:after {
+    content: " ";
+    display: table; }
+  .form-item:after {
+    clear: both; }
+
+.form-label {
+  display: inline-block;
+  width: 95px;
+  margin-left: -95px;
+  text-align: right; }
+
+.form-required {
+  font-weight: bold;
+  color: red; }
+
+.form-explain {
+  padding: 3px 0 0 3px;
+  color: #999; }
 
 textarea,
-input[type="text"],
-input[type="password"] {
+.input {
   padding: 1px 3px;
   border: 1px solid #b5b8c8;
   background: white url("../images/text-bg.gif") repeat-x 0 0; }
 
-input.form-invalid {
-  border: 1px solid #cc3300;
-  background: white url("../images/invalid_line.gif") repeat-x bottom; }
-
 textarea:focus,
-input[type="text"]:focus,
-input[type="password"]:focus {
+.input:focus {
   border-color: #7eadd9;
   outline: none; }
 
-input[type="text"],
-input[type="password"] {
+.form-item-error .input, .form-item-error textarea {
+  border: 1px solid #cc3300;
+  background: white url("../images/invalid_line.gif") repeat-x bottom; }
+.form-item-error .form-explain {
+  padding-left: 20px;
+  color: #ff5243;
+  background: url("../images/exclamation.gif") no-repeat 0 2px; }
+
+.input {
   height: 15px; }
 
-.form-bd .span2 input {
-  width: 40px; }
+.form-bd .span2 .input {
+  width: 20px; }
 
-.form-bd .span3 input {
-  width: 120px; }
+.form-bd .span3 .input {
+  width: 100px; }
 
-.form-bd .span4 input {
-  width: 200px; }
+.form-bd .span4 .input {
+  width: 180px; }
 
-.form-bd .span5 input {
-  width: 280px; }
+.form-bd .span5 .input {
+  width: 260px; }
 
-.form-bd .span6 input {
-  width: 360px; }
+.form-bd .span6 .input {
+  width: 340px; }
 
-.form-bd .span7 input {
-  width: 440px; }
+.form-bd .span7 .input {
+  width: 420px; }
 
-.form-bd .span8 input {
-  width: 520px; }
+.form-bd .span8 .input {
+  width: 500px; }
 
-.form-bd .span9 input {
-  width: 600px; }
+.form-bd .span9 .input {
+  width: 580px; }
 
-.form-bd .span10 input {
-  width: 680px; }
+.form-bd .span10 .input {
+  width: 660px; }
 
-.form-bd .span11 input {
-  width: 760px; }
+.form-bd .span11 .input {
+  width: 740px; }
 
-.form-bd .span12 input {
-  width: 840px; }
+.form-bd .span12 .input {
+  width: 820px; }
+
+input {
+  vertical-align: middle;
+  _height: 13px; }
 
 textarea {
   overflow: auto;
   vertical-align: top; }
 
 fieldset {
-  padding: 10px;
+  margin: 10px;
   border: 1px solid #b5b8c8; }
 
 fieldset legend {

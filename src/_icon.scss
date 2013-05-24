@@ -28,10 +28,6 @@
 }
 
 /*自定义图标*/
-.icon-exclamation {
-  @include icon(url('../images/exclamation.gif'));
-}
-
 .icon-book-addresses {
   @include icon(url('../images/icons/book_addresses.png'));
 }
